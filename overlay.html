@@ -1,0 +1,15 @@
+<template name="overlay">
+    <div class="container if-container">
+      {{#momentum plugin=animation}}
+            {{#if overlayVisible}}
+              <div class="overlay">
+                {{#if data.closeable}}
+                  <a class="js-overlay-close overlay-close">✕</a>
+                {{/if}}
+                
+                {{> Template.dynamic template=currentOverlay data=data }}
+              </div>
+            {{/if}}
+      {{/momentum}}
+  </div>
+</template>

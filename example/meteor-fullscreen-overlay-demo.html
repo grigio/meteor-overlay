@@ -1,0 +1,23 @@
+<head>
+  <title>meteor-fullscreen-overlay-demo</title>
+</head>
+
+<body>
+    <h1>Hi, this is a demo to test the fullscreen overlay</h1>
+
+    {{> hello}}
+
+    {{> overlay}}
+
+</body>
+
+<template name="hello">
+  <h2>{{title}}</h2>
+  {{#unless isInOverlay}}
+    <button class="js-overlay-open">Open Hello template in Overlay</button>
+  {{/unless}}
+  <p>
+    You clicked {{counter}} times.
+    <button class="js-count">+1</button>
+  </p>
+</template>
